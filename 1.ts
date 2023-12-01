@@ -19,10 +19,10 @@ const digits = new Map<string, number> ([
 
 function extractNumber(s: string): number {
   const regexp = /(?=(\d|one|two|three|four|five|six|seven|eight|nine))/g;
-  const matches = Array.from(s.matchAll(regexp), (match) => match[1]);
+  const matches: string[] = Array.from(s.matchAll(regexp), (match) => match[1]);
   // let matches = s.match(regexp);
-  const firstMatch = matches[0];
-  const lastMatch = matches[matches.length - 1]
+  const firstMatch: string = matches[0];
+  const lastMatch: string = matches[matches.length - 1]
 
   return matchToNum(firstMatch) * 10 + matchToNum(lastMatch)
 }
