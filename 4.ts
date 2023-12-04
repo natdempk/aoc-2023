@@ -7,7 +7,7 @@ let sum = 0;
 
 for (const line of lines) {
   const [_, nums] = line.split(':')
-  let [winString, cardString] = nums.split('|');
+  const [winString, cardString] = nums.split('|');
 
   const winningNums = new Set<number>(
     winString.trim().split(' ').filter(s => s !== '')
@@ -40,9 +40,9 @@ interface Card {
 
 lines = text.trim().split(/\r?\n/).map(line => line.trim())
 
-let cards : Card[] = lines.map(line => {
+const cards : Card[] = lines.map(line => {
   const [_, nums] = line.split(':')
-  let [winString, cardString] = nums.split('|');
+  const [winString, cardString] = nums.split('|');
 
   const winningNums = new Set<number>(
     winString.trim().split(' ').filter(s => s !== '')
