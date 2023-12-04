@@ -13,7 +13,7 @@ for (const line of lines) {
     winString.trim().split(' ').filter(s => s !== '')
     .map(s => parseInt(s, 10)));
   const cardNums = new Set<number>(
-    cardString.trim().split(' ').filter(s => s != '')
+    cardString.trim().split(' ').filter(s => s !== '')
     .map(s => parseInt(s, 10)));
   
   let matches = 0;
@@ -48,7 +48,7 @@ const cards : Card[] = lines.map(line => {
     winString.trim().split(' ').filter(s => s !== '')
     .map(s => parseInt(s, 10)));
   const cardNums = new Set<number>(
-    cardString.trim().split(' ').filter(s => s != '')
+    cardString.trim().split(' ').filter(s => s !== '')
     .map(s => parseInt(s, 10)));
 
     return {
